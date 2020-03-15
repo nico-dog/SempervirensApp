@@ -10,6 +10,11 @@ target_include_directories(app PRIVATE include)
 target_compile_options(app PRIVATE -Wall -O2)
 target_compile_features(app PRIVATE cxx_std_17)
 
+
+if(UNIX)
+target_compile_definitions(app PRIVATE PLATFORM_UNIX=1)
+endif()
+
 if(${build_logging})
 target_compile_definitions(app PRIVATE BUILD_LOGGING=1)
 endif()
