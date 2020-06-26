@@ -2,13 +2,13 @@
 #define TESTAPP_HPP
 #include <Sempervirens.hpp>
 
-class TestApp : public sempervirens::app::Application {
-
+class TestApp : public sempervirens::app::Application
+{
 public:
-  TestApp() = default;
-  ~TestApp() = default;
+  TestApp();
+  ~TestApp();
 };
 
-sempervirens::app::Application* sempervirens::app::createApplication();
+Block<sempervirens::app::Application> sempervirens::app::createApplication(Arena_t& arena);
 
 #endif

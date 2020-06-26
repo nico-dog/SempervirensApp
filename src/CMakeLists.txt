@@ -4,8 +4,8 @@ project(TestApp VERSION 1.0 LANGUAGES C CXX)
 include(GNUInstallDirs)
 
 add_executable(app)
-target_sources(app PRIVATE src/TestApp.cpp)
-target_include_directories(app PRIVATE include)
+target_sources(app PRIVATE TestApp.cpp)
+target_include_directories(app PRIVATE ../include)
 
 target_compile_options(app PRIVATE -Wall -O2)
 target_compile_features(app PRIVATE cxx_std_17)
